@@ -1,0 +1,10 @@
+<%= form_with(model: @sns, url: snss_index_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>content:<%= @sns.content %></p>
+  <%= form.submit  "save" %>
+<% end %>
+
+<%= form_with(model: @sns, url: new_snss_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit  "cancel", name: 'back' %>
+<% end %>

@@ -1,0 +1,36 @@
+<div class="top">
+    <div class="toolbar">
+        <%= link_to "Tweet", new_snss_path %>
+    </div>
+</div>
+<div class="body">
+    <div class="header">
+        
+    </div>
+    
+    <div class="footer">
+        <div class="left">
+            
+        </div>
+        
+        <div class="center">
+            <% @snss.each do |sns| %>
+                <div class="content">
+                    <div class="imgbox"><%= image_tag("default_profile_bigger.png", size: "70x70") %></div>
+                    <div class="contentbox" onclick="location.href=('<%= snss_path(sns.id) %>');">
+                        <p>チェビョンチャン<%= sns.updated_at %></p>
+                        <p><%= sns.content %></p>
+                    </div>
+                    <div class="accessbox">
+                        <p><%= link_to "edit", edit_snss_path(sns.id) %></p>
+                        <p><%= link_to "delete", snss_path(sns.id), method: :delete, data: { confirm: 'delete on more check' } %></p>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        
+        <div class="right">
+             
+        </div>
+    </div>
+</div>
