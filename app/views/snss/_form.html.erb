@@ -1,22 +1,24 @@
-<%= form_with(model: @sns, local: true, url: choose_new_or_edit) do |form| %>
-  <% if @sns.errors.any? %>
-    <div id="error_explanation">
-      <h2>error count : <%= @sns.errors.count %>件のエラーがあります。</h2>
-      <ul>
-
-      <% @sns.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <br>
+<div class="editer">
+  <%= form_with(model: @sns, local: true, url: choose_new_or_edit) do |form| %>
+    <% if @sns.errors.any? %>
+      <div id="error_explanation">
+        <h2>error count : <%= @sns.errors.count %>件のエラーがあります。</h2>
+        <ul>
   
-  <div class="sns_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
-
-<%= link_to "cancel", snss_index_path %>
+        <% @sns.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <br>
+    
+    <div class="sns_title">
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+    </div>
+    <%= form.submit %>
+  <% end %>
+  
+  <%= link_to "cancel", snss_index_path %>
+</div>

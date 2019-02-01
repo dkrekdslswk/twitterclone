@@ -1,36 +1,31 @@
-<div class="top">
-    <div class="toolbar">
-        <%= link_to "Tweet", new_snss_path %>
-    </div>
+<div class="container">
+    <header class="header">tweeet <%= link_to "Tweet", new_snss_path, class: "btn btn-info" %></header>
+    <p class="center">twitter clone service</p>
 </div>
-<div class="body">
-    <div class="header">
-        
-    </div>
-    
-    <div class="footer">
-        <div class="left">
+<div class="contents">
+    <ul class="row">
+        <li class="col-xs-12 col-md-3">
             
-        </div>
+        </li>
         
-        <div class="center">
+        <li class="col-xs-12 col-md-6">
             <% @snss.each do |sns| %>
-                <div class="content">
-                    <div class="imgbox"><%= image_tag("default_profile_bigger.png", size: "70x70") %></div>
-                    <div class="contentbox" onclick="location.href=('<%= snss_path(sns.id) %>');">
-                        <p>チェビョンチャン<%= sns.updated_at %></p>
+                <div class="row-A">
+                    <div class="col-xs-2"><%= image_tag("default_profile_bigger.png", size: "70x70") %></div>
+                    <div class="col-xs-8" onclick="location.href=('<%= snss_path(sns.id) %>');">
+                        <p>チェビョンチャン<small><%= sns.updated_at %></small></p>
                         <p><%= sns.content %></p>
                     </div>
-                    <div class="accessbox">
-                        <p><%= link_to "edit", edit_snss_path(sns.id) %></p>
-                        <p><%= link_to "delete", snss_path(sns.id), method: :delete, data: { confirm: 'delete on more check' } %></p>
+                    <div class="col-xs-2">
+                        <p><%= link_to "edit", edit_snss_path(sns.id), class: "btn btn-default" %></p>
+                        <p><%= link_to "delete", snss_path(sns.id), method: :delete, data: { confirm: 'delete on more check' }, class: "btn btn-default" %></p>
                     </div>
                 </div>
             <% end %>
-        </div>
+        </li>
         
-        <div class="right">
+        <li class="col-xs-12 col-md-3">
              
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>

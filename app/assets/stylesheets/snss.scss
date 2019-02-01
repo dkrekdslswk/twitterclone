@@ -1,89 +1,39 @@
-div{
-    display: inline-block;
+li{
+    list-style:none;
 }
-html{
-    background: #e6ecf0;
-}
-body{
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-size: 14px;
-    overflow-y: scroll;
-    color: #14171a;
-    text-align: center;
-}
-    
-.top{
-    background: #FFFFFF;
-    height: 46px;
-    width: 100%;
-    
-    .toolbar{
-        height: 100%;
-        width: 1000px;
-        position: relative;
-        margin: 0 auto;
-        text-align: right;
-    }
+ul{
+    padding:0;
 }
 
-.body{
-    .header{
-        content: "";
-        height: 175px;
-        width: 100%;
-        background: #1DA1F2;
+body{
+    background-color:#E6ECF0;
+}
+
+.header{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.contents {
+    li{
+        background-color:#fff;
+        color:#000;
+        padding: 10%;
+        box-sizing: border-box;
+        border: solid 1px #000;
+        height: auto;
     }
-    .footer{
-        text-align: left;
-        padding: auto;
-        width: 1000px;
-        float: center;
-        text-align: center;
-        
-        .left{
-            background: #FFFFFF;
-            float: left;
-            vertical-align: top;
-            margin: 0;
-            height: 450px;
-            width: 190px;
-        }
-        .center{
-            text-align: left;
-            background: #FFFFFF;     
-            vertical-align: top;
-            margin: 0;
-            width: 600px;
-            
-            .content{
-                float: center;          
-                border: 1px #14171a;
-                width: 600px;
-                
-                .imgbox{
-                    float: left;
-                    height: 90px;
-                    width: 90px;
-                }
-                .contentbox{
-                    text-align: left;
-                    float: center;
-                    width: 450px;
-                }
-                .accessbox{
-                    float: right;            
-                    width: 45px;
-                }
-            }
-        }
-        .right{
-            text-align: left;
-            background: #FFFFFF;
-            float: right;            
-            vertical-align: top;
-            margin: 0;
-            height: 800px;
-            width: 190px;
-        }
-    }
+}
+.container{
+    margin-top:20px;
+    padding-bottom: 100px;
+    background-image: url("Balloon.png");
+}
+
+.editer{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    background-color:#fff;
 }

@@ -1,12 +1,14 @@
-<div class="content">
-    <div class="imgbox"><%= image_tag("default_profile_bigger.png", size: "70x70") %></div>
-    <div class="contentbox">
-        <p>チェビョンチャン</p>
-        <h2><%= @sns.content %></h2>
-        <p><%= @sns.updated_at %></p>
-    </div>
-    <div class="accessbox">
-        <p><%= link_to "edit", edit_snss_path(@sns.id) %></p>
-        <p><%= link_to "delete", snss_path(@sns.id), method: :delete, data: { confirm: 'delete on more check' } %></p>
+
+<div class="editer">
+    <div class="row">
+        <div class="col-xs-2"><%= image_tag("default_profile_bigger.png", size: "70x70") %></div>
+        <div class="col-xs-8">
+            <p>チェビョンチャン<%= @sns.updated_at %></p>
+            <p><%= @sns.content %></p>
+        </div>
+        <div class="col-xs-2">
+            <p><%= link_to "edit", edit_snss_path(@sns.id), class: "btn btn-default" %></p>
+            <p><%= link_to "delete", snss_path(@sns.id), method: :delete, data: { confirm: 'delete on more check' }, class: "btn btn-default" %></p>
+        </div>
     </div>
 </div>
