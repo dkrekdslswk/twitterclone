@@ -8,12 +8,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div class="container">
+    <header class="header">tweeet <%= link_to "Tweet", new_snss_path, class: "btn btn-info" %></header>
+  </div>
+  
   <body class="canter">
     <%= yield %>
   </body>
   
   <footer>
-    
+    Dive-into-code
   </footer>
 </html>
