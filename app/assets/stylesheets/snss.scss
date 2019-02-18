@@ -10,9 +10,14 @@ body{
 }
 
 .header{
+    background-color:#5882FA;
     font-size:20px;
     font-weight:bold;
     text-align:center;
+}
+
+.footer{
+    background-color:#5882FA;
 }
 
 .contents {
@@ -27,7 +32,10 @@ body{
 }
 .container{
     margin-top:20px;
-    padding-bottom: 100px;
+}
+
+.top{
+    margin-top:20px;
     background-image: url("Balloon.png");
 }
 
