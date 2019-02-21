@@ -13,6 +13,14 @@
     tweeet
     <%= link_to "Top", root_path, class: "btn btn-info" %>
     <%= link_to "Twiter", snss_index_path, class: "btn btn-info" %>
+    
+    <% if logged_in? %>
+      <%= link_to "Profile", user_path(current_user.id), class: "btn btn-info" %>
+      <%= link_to "Logout", session_path(current_user.id), method: :delete, class: "btn btn-info" %>
+    <% else %>
+      <%= link_to "Sign up", new_user_path, class: "btn btn-info" %>
+      <%= link_to "Login", new_session_path, class: "btn btn-info" %>
+    <% end %>
   </header>
   
   <body class="canter">

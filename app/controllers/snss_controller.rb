@@ -1,4 +1,5 @@
 class SnssController < ApplicationController
+  before_action :login_check, only: [:show, :edit, :update, :destroy] 
   before_action :set_sns, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -54,5 +55,11 @@ class SnssController < ApplicationController
   
   def set_sns
     @sns = Snss.find(params[:id])
+  end
+  
+  def login_check
+    if !logged_in?
+      redirect_to new_session_path
+    end
   end
 end
