@@ -1,5 +1,5 @@
 class SnssController < ApplicationController
-  before_action :login_check, only: [:show, :edit, :update, :destroy] 
+  before_action :login_check, only: [:new, :show, :edit, :update, :destroy] 
   before_action :set_sns, only: [:show, :edit, :update, :destroy]
   
   def index
